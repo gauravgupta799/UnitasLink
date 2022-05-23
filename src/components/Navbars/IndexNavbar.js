@@ -51,7 +51,7 @@ export default function IndexNavbar() {
   return (
     <Navbar className={"fixed-top " + color} color-on-scroll="100" expand="lg">
         <div className="navbar-translate">
-          <NavbarBrand to="https://unitaslink.com/" tag={Link} id="navbar-brand">
+          <NavbarBrand href="https://unitaslink.com" id="navbar-brand">
             <span className="h2" style={{color:"#fff"}}>UnitasLink</span>     
           </NavbarBrand>
           <button
@@ -136,18 +136,18 @@ export default function IndexNavbar() {
                 onClick={(e) => e.preventDefault()}
               >
                 <i className="fa fa-cogs d-lg-none d-xl-none" />
-                Getting started
+                See Demo
               </DropdownToggle>
               <DropdownMenu className="dropdown-with-icons">
-                <DropdownItem href="https://demos.creative-tim.com/blk-design-system-react/#/documentation/overview">
+                <DropdownItem href="https://demo-validate.unitaslink.com/">
                   <i className="tim-icons icon-paper" />
                   Verify NFT 
                 </DropdownItem>
-                <DropdownItem tag={Link} to="/register-page">
+                <DropdownItem href="http://demo-mint.unitaslink.com/">
                   <i className="tim-icons icon-bullet-list-67" />
                   Mint NFT with Crypto
                 </DropdownItem>
-                <DropdownItem tag={Link} to="/landing-page">
+                <DropdownItem href="http://demo-mint-fiat.unitaslink.com/">
                   <i className="tim-icons icon-image-02" />
                   Mint NFT with Fiat
                 </DropdownItem>
@@ -158,7 +158,7 @@ export default function IndexNavbar() {
                 className="nav-link d-none d-lg-block"
                 color="success"
                 target="_blank"
-                href="https://www.creative-tim.com/product/blk-design-system-pro-react?ref=bdsr-user-archive-index-navbar-upgrade-pro"
+                href="https://unitaslink.com/contact/"
               >
                 <i className="tim-icons icon-single-02" />Connect Us
               </Button>
