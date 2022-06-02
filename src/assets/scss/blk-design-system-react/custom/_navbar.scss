@@ -430,7 +430,7 @@
   }
 
   .navbar-collapse{
-    position: absolute;
+    position: absolute !important;
     width: calc(100% - 1.4rem);
     height: auto !important;
     left: 0;

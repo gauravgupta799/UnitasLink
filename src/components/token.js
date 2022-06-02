@@ -1,15 +1,18 @@
 import { ethers } from "ethers";
-
 import  MyToke from "../artifacts/MyToke.json"
-import URL from "./url.js"
+// import URL from "./url.js"
 
 //for minting the token on blockchain
-const contractAddress='0x76F2784e4beE049D0c2cF9f05c6D946aaf2ee672';
+// const contractAddress='0x76F2784e4beE049D0c2cF9f05c6D946aaf2ee672';
 // const contractAddress="0x4108034edd3E02583c8aC198f86c38c81d4e895d";
-const token=async(ur)=>{
-      if (typeof window !== "undefined" && typeof window.ethereum !== "undefined"){              
+const contractAddress="0x76F2784e4beE049D0c2cF9f05c6D946aaf2ee672";
+
+const token = async(ur) => {
+  console.log("window",window)
+      if ( typeof window !== "undefined" && typeof window.ethereum !== "undefined"){              
         let provider;
-        window.ethereum.enable().then(provider = new ethers.providers.Web3Provider(window.ethereum));
+        window.ethereum.enable()
+        .then(provider = new ethers.providers.Web3Provider(window.ethereum));
         // const chainId = await window.ethereum.request({ method: 'eth_chainId' });
         // console.log("ChainID",chainId)
         // const polygonChainId = '0x89'
@@ -35,12 +38,12 @@ const token=async(ur)=>{
       // }
           
       provider = new ethers.providers.Web3Provider(window.ethereum)
-      const signer=provider.getSigner();
-      const contract=new ethers.Contract(contractAddress,MyToke.abi,signer);
-      const metadataURI=ur
-      const connection=contract.connect(signer);         
+      const signer = provider.getSigner();
+      const contract = new ethers.Contract(contractAddress, MyToke.abi, signer);
+      const metadataURI = ur;
+      const connection = contract.connect(signer);         
       const addr = await signer.getAddress(); //takes metamask address of user
-      const result=await contract.safeMint(addr,metadataURI); //minting the nft on contract
+      const result = await contract.safeMint(addr,metadataURI); //minting the nft on contract
           //try{
           //const r=await contract.ownerOf(100);
           //console.log(r)
@@ -57,5 +60,4 @@ const token=async(ur)=>{
         alert('Metamask not installed.')
       }
   }
-
 export default token;

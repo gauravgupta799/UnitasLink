@@ -1,6 +1,14 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
-import {Button,Collapse,DropdownToggle, DropdownMenu,DropdownItem, UncontrolledDropdown,NavbarBrand,Navbar,NavItem,NavLink,Nav,Row,Col,} from "reactstrap";
+
+import {Button, Collapse,DropdownToggle, DropdownMenu,DropdownItem,UncontrolledDropdown,NavbarBrand,Navbar,
+  NavItem,
+  NavLink,
+  Nav,
+  Row,
+  Col,
+} from "reactstrap";
 
 export default function IndexNavbar() {
 
@@ -51,7 +59,7 @@ export default function IndexNavbar() {
   return (
     <Navbar className={"fixed-top " + color} color-on-scroll="100" expand="lg">
         <div className="navbar-translate">
-          <NavbarBrand href="https://unitaslink.com" id="navbar-brand">
+          <NavbarBrand href="https://unitaslink.com"  id="navbar-brand">
             <span className="h2" style={{color:"#fff"}}>UnitasLink</span>     
           </NavbarBrand>
           <button
@@ -75,7 +83,7 @@ export default function IndexNavbar() {
             <Row>
               <Col className="collapse-brand" xs="6">
                 <NavLink href="https://unitaslink.com/" onClick={(e) => e.preventDefault()}>
-                  UnitasLink
+                   UnitasLink
                 </NavLink>
               </Col>
               <Col className="collapse-close text-right" xs="6">
@@ -126,7 +134,7 @@ export default function IndexNavbar() {
                 <p className="d-lg-none d-xl-none">LinkedIn</p>
               </NavLink>
             </NavItem>
-            <UncontrolledDropdown nav>
+            <UncontrolledDropdown nav >
               <DropdownToggle
                 caret
                 color="default"
@@ -139,15 +147,15 @@ export default function IndexNavbar() {
                 See Demo
               </DropdownToggle>
               <DropdownMenu className="dropdown-with-icons">
-                <DropdownItem href="https://demo-validate.unitaslink.com/">
+                <DropdownItem href=" https://demo-validate.unitaslink.com/">
                   <i className="tim-icons icon-paper" />
                   Verify NFT 
                 </DropdownItem>
-                <DropdownItem href="http://demo-mint.unitaslink.com/">
+                <DropdownItem href="https://demo-mint.unitaslink.com/">
                   <i className="tim-icons icon-bullet-list-67" />
                   Mint NFT with Crypto
                 </DropdownItem>
-                <DropdownItem href="http://demo-mint-fiat.unitaslink.com/">
+                <DropdownItem  href="https://demo-mint-fiat.unitaslink.com/">
                   <i className="tim-icons icon-image-02" />
                   Mint NFT with Fiat
                 </DropdownItem>

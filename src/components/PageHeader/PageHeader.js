@@ -5,8 +5,7 @@ import {Button } from "reactstrap";
 
 export default function PageHeader() {
   const mintToken = async () => {
-    const ur =
-      "https://gateway.pinata.cloud/ipfs/QmWQ4o2Keu9kHWnGmbZW4jbjxmthP73GPzWP9UmTmLzKYY";
+    const ur = "https://gateway.pinata.cloud/ipfs/QmWQ4o2Keu9kHWnGmbZW4jbjxmthP73GPzWP9UmTmLzKYY";
     token(ur);
   };
   return (
@@ -23,4 +22,4 @@ export default function PageHeader() {
       </div>
     </>
   );
-}
+} 
